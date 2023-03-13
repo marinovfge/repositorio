@@ -1,0 +1,45 @@
+{% extends 'template.html' %}
+{% block title %}dashboard fge{% endblock %}
+
+{% block content %}
+    <h1 class="text-center">Dashboard General FGE</h1>
+    <h3>Fecha de  Corte: {{fecha_corte}}</h3>
+    <div class="demo-box">
+      <div class="text-bg-dark text-center">
+        Noticias del Delito Por Provincia, Cantón de Incidente, Delito y Año de Registro
+      </div>
+      <div id="pivot-provinciaCanton"></div>
+    </div>
+    
+    <div class="demo-box">
+      <div class="row">
+        <div class="col-6">
+          <div class="text-bg-info text-center">
+            Noticias del Delito por Provincia de Incidente
+          </div>
+          <div id="barras-ProvinciaCanton"></div>
+        </div>
+        <div class="col-6">
+        <div class="text-bg-info text-center">
+          Delitos Flagrantes
+        </div>
+        <div id="pie-flagrantes"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="demo-box">
+      <div class="text-bg-warning text-center">Delitos por Tipo y Año</div>
+          <div id="tabla-delitosTipoAnio"></div>
+    </div>
+    <div class="demo-box">
+      <div class="text-bg-warning text-center">
+        grafico barras
+      </div>
+      <div id="barras-delitosHorarioAnio"></div>
+    </div>
+    
+    <script src="https://cdn.flexmonster.com/flexmonster.js"></script>
+    <script src="{{url_for('static', filename='js/dashboard.js')}}"></script>
+    <script src="{{url_for('static', filename='css/mystyles.css')}}"></script>
+{% endblock %}

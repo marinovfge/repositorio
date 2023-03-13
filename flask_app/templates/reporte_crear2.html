@@ -1,0 +1,21 @@
+{% extends 'template.html' %}
+{% block title %}FGE - Pivot{% endblock %}
+
+{% block content %}
+    
+    <h1 class="text-center text-bg-primary">Generador de Tablas Cruzadas y Gráficas FGE</h1>
+    <p>En esta sección se puede generar consultas sobre los datos agregados de <strong>Denuncias</strong> registrados en la Fiscalía General del Estado. Para esto</p>
+    <ol>
+        <li>Clic en Campos</li>
+        <li>Seleccionar una variable desde <strong>todos los campos</strong></li>
+        <li>Colocar la variable como fila, columna</li>
+        <li>Puede añadir otra variable como filtro</li>
+        <li>Verifique que en Valores esté seleccionado <strong>Distinto Conteo de Noticia del Delito</strong></li>
+        <li>Clic en Aplicar</li>
+    </ol>    
+
+    <div id="pivot-container-report">
+    </div>
+    <script src="https://cdn.flexmonster.com/flexmonster.js"></script>
+    <script src="{{url_for('static', filename='js/myreport.js')}}"></script>
+{% endblock %}

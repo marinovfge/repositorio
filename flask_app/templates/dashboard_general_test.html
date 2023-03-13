@@ -1,0 +1,46 @@
+{% extends 'template.html' %}
+{% block title %}dashboard-prueba{% endblock %}
+
+{% block content %}
+    <h1>Dashboard General </h1>
+    <div class="demo-box">
+      <div class="demo-title">
+        Treatment Costs by Departments
+      </div>
+      <div id="pivot-container-1"></div>
+    </div>
+    
+    <div class="demo-box">
+      <div class="row">
+        <div class="col-6">
+          <div class="demo-title">
+            Overall Customer Satisfaction
+          </div>
+          <div id="pie-chart-container"></div>
+        </div>
+        <div class="col-6">
+          <div class="demo-title right-text">
+            Customer Satisfaction by Patient Status
+          </div>
+          <div id="column-chart-container"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="demo-box">
+      <div class="demo-title">
+        Overall Customer Satisfaction
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div id="pivot-container-2"></div>
+        </div>
+        <div class="col-6">
+          <div id="bar-chart-container"></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.flexmonster.com/flexmonster.js"></script>
+    <script src="{{url_for('static', filename='js/flex_example.js')}}"></script>
+    <script src="{{url_for('static', filename='css/mystyles.css')}}"></script>
+{% endblock %}
