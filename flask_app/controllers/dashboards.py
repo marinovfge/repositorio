@@ -11,7 +11,8 @@ def dashboard_general():
 
 @app.route('/reporte-crear')
 def dashboard_crear():
-    return render_template("reporte_crear2.html")
+    fecha_corte = Dashboard.get_fecha_corte()
+    return render_template("reporte_crear2.html", fecha_corte=fecha_corte)
 
 
 @app.route('/dashboard-general-fge')
