@@ -9,13 +9,13 @@ def dashboard_general():
     return render_template("dashboard_general_test.html")
 
 
-@app.route('/reporte-crear')
+@app.route('/reporte-crear', methods=['GET'])
 def dashboard_crear():
     fecha_corte = Dashboard.get_fecha_corte()
     return render_template("reporte_crear2.html", fecha_corte=fecha_corte)
 
 
-@app.route('/dashboard-general-fge')
+@app.route('/dashboard-general-fge', methods=['GET'])
 def dashboard_general_fge():
     fecha_corte = Dashboard.get_fecha_corte()
     return render_template("dashboard_general_fge.html", fecha_corte = fecha_corte)
