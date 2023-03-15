@@ -2,6 +2,9 @@ import os
 from flask import Flask
 from sqlalchemy import create_engine
 from dotenv import load_dotenv
+
+load_dotenv('.env')
+
 app = Flask(__name__)
 app.secret_key = os.getenv('APP_SECRET_KEY')
 
