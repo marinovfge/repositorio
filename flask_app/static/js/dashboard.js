@@ -44,7 +44,7 @@ let pivot_table_ProvinciaCantonAnio = new Flexmonster({
             measures: [
                 {
                     uniqueName: "NoticiaDelito",
-                    aggregation: "distinctcount",
+                    aggregation: "count",
                     caption: "Noticia del Delito"
                 }
             ],
@@ -54,7 +54,7 @@ let pivot_table_ProvinciaCantonAnio = new Flexmonster({
                     tuple: [],
                     measure: {
                         uniqueName: "NoticiaDelito",
-                        aggregation: "distinctcount"
+                        aggregation: "count"
                     }
                 }
             }
@@ -71,7 +71,7 @@ let pivot_table_ProvinciaCantonAnio = new Flexmonster({
             tuple:[],
             measure:{
                 uniqueName: "NoticiaDelito",
-                aggregation: "distinctcount",
+                aggregation: "count",
             },
             width:80,
         },
@@ -132,7 +132,7 @@ let barras_ProvinciaCantonAnio = new Flexmonster({
             measures: [
                 {
                     uniqueName: "NoticiaDelito",
-                    aggregation: "distinctcount",
+                    aggregation: "count",
                     caption: "Noticia del Delito"
                 }
             ],
@@ -142,7 +142,7 @@ let barras_ProvinciaCantonAnio = new Flexmonster({
                     tuple: [],
                     measure: {
                         uniqueName: "NoticiaDelito",
-                        aggregation: "distinctcount"
+                        aggregation: "count"
                     }
                 }
             }
@@ -213,7 +213,7 @@ let pie_flagrantes = new Flexmonster({
             measures: [
                 {
                     uniqueName: "NoticiaDelito",
-                    aggregation: "distinctcount",
+                    aggregation: "count",
                     caption: "Noticia del Delito"
                 }
             ],
@@ -223,7 +223,7 @@ let pie_flagrantes = new Flexmonster({
                     tuple: [],
                     measure: {
                         uniqueName: "NoticiaDelito",
-                        aggregation: "distinctcount"
+                        aggregation: "count"
                     }
                 }
             }
@@ -298,7 +298,7 @@ let tabla_delitosTipoAnio = new Flexmonster({
             measures: [
                 {
                     uniqueName: "NoticiaDelito",
-                    aggregation: "distinctcount",
+                    aggregation: "count",
                     caption: "Noticia del Delito"
                 }
             ],
@@ -308,7 +308,7 @@ let tabla_delitosTipoAnio = new Flexmonster({
                     tuple: [],
                     measure: {
                         uniqueName: "NoticiaDelito",
-                        aggregation: "distinctcount"
+                        aggregation: "count"
                     }
                 }
             }
@@ -380,7 +380,7 @@ let barras_delitosHorarioAnio = new Flexmonster({
             measures: [
                 {
                     uniqueName: "NoticiaDelito",
-                    aggregation: "distinctcount",
+                    aggregation: "count",
                     caption: "Noticia del Delito"
                 }
             ]
