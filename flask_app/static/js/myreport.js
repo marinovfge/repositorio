@@ -27,7 +27,7 @@ let pivot = new Flexmonster({
           "measures": [
               {
                   "uniqueName": "NoticiaDelito",
-                  "aggregation": "distinctcount",
+                  "aggregation": "count",
                   "caption": "Noticia del Delito"
               }
           ]
