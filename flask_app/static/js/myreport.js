@@ -12,8 +12,8 @@ let pivot = new Flexmonster({
     report: {
       "dataSource": {
           type: "elasticsearch",
-          node: "http://192.168.152.196:4200/api/cube",
-        //   node: "https://proxyanalitica.fiscalia.gob.ec/api/cube",
+        //   node: "http://192.168.152.196:4200/api/cube",
+          node: "https://proxyanalitica.fiscalia.gob.ec/api/cube",
           index: "opendata_lake",
           mapping: {
           } 
