@@ -11,10 +11,11 @@ let pivot = new Flexmonster({
     beforetoolbarcreated: customizeToolbar,
     report: {
       "dataSource": {
-          "type": "elasticsearch",
-          "node": "http://192.168.152.196:4200/api/cube",
-          "index": "opendata_lake",
-          "mapping": {
+          type: "elasticsearch",
+          node: "http://192.168.152.196:4200/api/cube",
+        //   node: "https://proxyanalitica.fiscalia.gob.ec/api/cube",
+          index: "opendata_lake",
+          mapping: {
           } 
       },
       "slice": {

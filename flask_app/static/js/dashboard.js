@@ -11,9 +11,10 @@ let pivot_table_ProvinciaCantonAnio = new Flexmonster({
     beforetoolbarcreated: customizeToolbarTotalBlock,
     report: {
         dataSource: {
-            "type": "elasticsearch",
-            "node": "http://192.168.152.196:4200/api/cube",
-            "index": "opendata_lake"
+            type: "elasticsearch",
+            node: "http://192.168.152.196:4200/api/cube",
+            // node: "https://proxyanalitica.fiscalia.gob.ec/api/cube",
+            index: "opendata_lake"
         },
         slice: {
             reportFilters: [
@@ -98,9 +99,10 @@ let barras_ProvinciaCantonAnio = new Flexmonster({
     toolbar: false,
     report: {
         dataSource: {
-            "type": "elasticsearch",
-            "node": "http://192.168.152.196:4200/api/cube",
-            "index": "opendata_lake"
+            type: "elasticsearch",
+            node: "http://192.168.152.196:4200/api/cube",
+            // node: "https://proxyanalitica.fiscalia.gob.ec/api/cube",
+            index: "opendata_lake"
         },
         slice: {
             reportFilters: [
@@ -180,9 +182,10 @@ let pie_flagrantes = new Flexmonster({
     toolbar: false,
     report: {
         dataSource: {
-            "type": "elasticsearch",
-            "node": "http://192.168.152.196:4200/api/cube",
-            "index": "opendata_lake"
+            type: "elasticsearch",
+            node: "http://192.168.152.196:4200/api/cube",
+            // node: "https://proxyanalitica.fiscalia.gob.ec/api/cube",
+            index: "opendata_lake"
         },
         slice: {
             reportFilters: [
@@ -265,6 +268,7 @@ let tabla_delitosTipoAnio = new Flexmonster({
         dataSource: {
             type: "elasticsearch",
             node: "http://192.168.152.196:4200/api/cube",
+            // node: "https://proxyanalitica.fiscalia.gob.ec/api/cube",
             index: "opendata_lake"
         },
         slice: {
@@ -348,6 +352,7 @@ let barras_delitosHorarioAnio = new Flexmonster({
         dataSource: {
             type: "elasticsearch",
             node: "http://192.168.152.196:4200/api/cube",
+            // node: "https://proxyanalitica.fiscalia.gob.ec/api/cube",
             index: "opendata_lake"
         },
         slice: {
