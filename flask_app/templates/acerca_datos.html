@@ -1,0 +1,96 @@
+{% extends 'template.html' %}
+{% block title %}Acerca de los Datos{% endblock %}
+
+{% block content %}
+    
+    <div class="container border border-primary mt-2">
+        <h2>Datos Abiertos FGE </h1>
+        <p>La información disponible para consulta dispone de las siguientes características</p>
+        <ul>
+            <li><strong>Fuente: </strong>Sistema Integrado de Actuaciones Fiscales (SIAF) - ANALÍTICA FGE</li>
+            <li><strong>Motor de búsqueda: </strong>Elasticsearch</li>
+            <li><strong>Fecha de Corte:. </strong>{{fecha_corte}}</li>
+            <li><strong>Período de Análisis: </strong>{{fecha_ini}} @ {{fecha_corte}}</li>
+            <li><strong>Unidad de Análisis: </strong>Noticia del Delito (NDD)</li>
+            <li><strong>Total de Registros: </strong>{{total_registros}}</li>
+        </ul>
+    </div>
+    <!-- <hr class="featurette-divider"> -->
+    <div class="container border border-danger mt-2">
+        <h4 class="text-bg-danger">Consideraciones</h4>
+        <ul>
+            <li>Se cuantifica el total de Noticia del Delito (NDD) registradas en el Sistema Integrado de Actuaciones Fiscales (SIAF).  Se contabilizan también las NDD que tienen dos o más registros, que corresponden a un mismo hecho delictivo y fueron asignadas a diferentes Fiscalías Especializadas debido a la naturaleza de la investigación</li>
+            <li>La información disponible corresponde a los registros de tipos penales del vigente <strong>Código Integral Penal (COIP), desde el año 2015</strong></li>
+            <li>Debe observarse que se dispone de los registros del año 2020. Sin embargo, estos registros son menores debido a la Pandemia de Covid-19</li>
+            <li>Consumado / tentativa</li>
+        </ul>
+    </div>
+    <!-- <hr class="featurette-divider"> -->
+    <div class="container border border-info mt-2">
+        <div class="row">
+            <div class="col">
+                <h4 class="text-bg-success">Dirección de Estadistica y Sistemas de Información</h4>
+                <p class="text-lg-start"><strong>Misión:</strong> Dirigir el levantamiento, procesamiento y análisis de
+                información estadística institucional, a fin de contribuir a la provisión de información 
+                cuantitativa que apoye la gestión institucional, toma de decisiones y proporcione respuestas a
+                requerimientos de información tanto interna como externa dentro de los ámbitos de intervención institucional.</p>
+            </div>
+            <div class="col">
+                <h4 class="text-bg-secondary">Noticia del Delito (NDD):</h4>
+                <p class="text-lg-start">Es  el  registro  en  el  Sistema  Integrado  de  Actuaciones  Fiscales  SIAF  de
+                    presuntos  hechos  delictivos  de  acción  pública  de  competencia  de  la  Fiscalía  General  del  Estado,
+                    identificadas  con  un  código  de  15  dígitos  numérico,  que  son  asignadas  a  las  diferentes  Unidades,
+                    Fiscalías Especializadas o Multicompetentes para su sustanciación, con el fin de brindar seguimiento
+                    en la trazabilidad y localización de las mismas
+                </p>
+            </div>
+            <div class="col">
+                <h4 class="text-bg-info">Sistema Integrado de Actuaciones Fiscales</h4>
+                <p class="text-lg-start">Sistema Informático para el registro y seguimiento de la gestión procesal de la Fiscalía General del Estado; 
+                permitiendo la homologación de las actuaciones fiscales y la optimización del tiempo de respuesta a usuarios externos e internos.</p>
+            </div>
+            <div class="col">
+                <h4 class="text-bg-dark">Plataforma Analítica FGE</h4>
+                <p class="text-lg-start" >Herramienta de inteligencia de negocios que procesa 
+                grandes cantidad es de datos estructurados y no estructurados que permite realizar
+                el análisis y visualización de la información de un sistema.</p>
+                <h5>Características Principales</h5>
+                <ul>
+                    <li><strong>Transparencia de la Gestión:</strong> Obtiene los datos estadísticos desde el SIAF</li>
+                    <li><strong>Datos Actuales: </strong>El sistema actualiza la información semanalmente</li>
+                    <li><strong>Unidad de Análisis: </strong>La unidad de análisis son las denuncias o <strong>Noticias del Delito(NDD)</strong></li>
+                    <li><strong>Big Data:</strong> Procesa grandes volumenes de información en poco tiempo</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- <hr class="featurette-divider"> -->
+    <div class="container border border-secondary mt-2">
+        <h3 class="text-bg-warning">Restricciones de la Información</h3>
+        <div class="row">
+            <div class="col">
+                <h4>Ley Estadística</h4>
+                <p><strong>Art. 21.-</strong> Los datos individuales que se obtengan para efecto de estadística y censos son de carácter reservado; en consecuencia, no podrán darse a conocer informaciones individuales de ninguna especie, ni podrán ser utilizados para otros fines como de tributación o conscripción, investigaciones judiciales y, en general, para cualquier objeto distinto del propiamente estadístico o censal.
+                    Solo se darán a conocer los resúmenes numéricos, las concentraciones globales, las totalizaciones y, en general, los datos impersonales.
+                </p>
+            </div>
+            <div class="col">
+                <h4>Artículo 472</h4>
+                <p> Establece que no podrá circular libremente la siguiente información:</p>
+                    <ol>
+                        <li>Aquella que esté protegida expresamente con una cláusula de reserva previamente establecida en la ley.</li>
+                        <li>La información acerca de datos de carácter personal y la que provenga de las comunicaciones personales cuya difusión no haya sido autorizada expresamente por su titular, por la ley o por el juzgados.</li>
+                        <li>Aquella que esté protegida expresamente con una cláusula de reserva previamente establecida en la ley.</li>
+                        <li>La información acerca de niñas, niños y adolescentes que viole sus derechos según lo establecidos en el Código Orgánico de la Niñez y Adolescencia y la Constitución.</li>
+                    </ol>                    
+            </div>
+            <div class="col">
+                <h4>Funciones de la Fiscalía General del Estado</h4>
+                <p>De conformidad con los artículos 194 y 195 de la Constitución de la República, la Fiscalía General del Estado es 
+                    un órgano autónomo de la Función Judicial, único e indivisible que dirigirá de oficio o a petición de parte, la investigación preprocesal y procesal penal
+                </p>
+                <a href="">Ver Más</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
