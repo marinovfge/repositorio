@@ -1,0 +1,24 @@
+{% extends 'template.html' %}
+{% block title %}DESI - FGE - LAKENDD{% endblock %}
+
+{% block content %}
+    
+    <h1 class="text-center text-bg-primary">DIRECCION DE ESTADADÍSTICA Y SISTEMAS DE INFORMACIÓN</h1>
+    <h3 class="text-center text-bg-success">LAKENDD</h3>
+    <p>En esta sección se puede generar consultas sobre los datos agregados de <strong>LAKENDD</strong>. Para esto:</p>
+    <ol>
+        <li>Clic en Campos</li>
+        <li>Seleccionar una variable desde <strong>todos los campos</strong></li>
+        <li>Colocar la variable como fila, columna</li>
+        <li>Puede añadir otra variable como filtro</li>
+        <li>Verifique que en Valores esté seleccionado <strong>Conteo de Noticia del Delito</strong></li>
+        <li>Clic en Aplicar</li>
+    </ol>    
+    <div class="justify-content-end">
+        <p class="text-bg-secondary text-lg-end"><strong>Fecha de Corte:</strong> {{fecha_corte}}</p>
+    </div>
+    <div id="pivot-container-report">
+    </div>
+    <script src="https://cdn.flexmonster.com/flexmonster.js"></script>
+    <script src="{{url_for('static', filename='js/lakendd.js')}}"></script>
+{% endblock %}
