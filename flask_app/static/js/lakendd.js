@@ -26,7 +26,7 @@ let pivot = new Flexmonster({
           ],
           "measures": [
               {
-                  "uniqueName": "NoticiaDelito",
+                  "uniqueName": "d_NDD.keyword",
                   "aggregation": "count",
                   "caption": "Noticia del Delito"
               }
@@ -43,8 +43,8 @@ function customizeToolbar(toolbar) {
     let tabs = toolbar.getTabs();
     toolbar.getTabs = function() {
       tabs = tabs.filter(tab => tab.id != "fm-tab-connect"); // desactiva connect
-      tabs = tabs.filter(tab => tab.id != "fm-tab-open"); // desactiva open
-      tabs = tabs.filter(tab => tab.id != "fm-tab-save"); // desactiva  save
+    //   tabs = tabs.filter(tab => tab.id != "fm-tab-open"); // desactiva open
+    //   tabs = tabs.filter(tab => tab.id != "fm-tab-save"); // desactiva  save
       
       return tabs;
     }
