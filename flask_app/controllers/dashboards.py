@@ -16,6 +16,17 @@ def dashboard_crear():
     return render_template("reporte_crear2.html", fecha_corte=fecha_corte)
 
 
+@app.route('/reporte-crear-desi', methods=['GET'])
+def dashboard_crear_reporte_desi():
+    """_summary_
+    Genera la Vista para Operar sobre Lakendd hasta que se habilite la vista al publico
+    Returns:
+        _type_: _description_
+    """
+    fecha_corte = Dashboard.get_fecha_corte()
+    return render_template("reporte_desi.html", fecha_corte=fecha_corte)
+
+
 @app.route('/dashboard-general-fge', methods=['GET'])
 def dashboard_general_fge():
     fecha_corte = Dashboard.get_fecha_corte()

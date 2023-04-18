@@ -1,10 +1,11 @@
 {% extends 'template.html' %}
-{% block title %}FGE - Pivot{% endblock %}
+{% block title %}DESI - FGE - LAKENDD{% endblock %}
 
 {% block content %}
     
-    <h1 class="text-center text-bg-primary">Generador de Tablas Cruzadas y Gráficas FGE</h1>
-    <p>En esta sección se puede generar consultas sobre los datos agregados de <strong>Denuncias</strong> registrados en la Fiscalía General del Estado. Para esto</p>
+    <h1 class="text-center text-bg-primary">DIRECCION DE ESTADADÍSTICA Y SISTEMAS DE INFORMACIÓN</h1>
+    <h3 class="text-center text-bg-success">LAKENDD</h3>
+    <p>En esta sección se puede generar consultas sobre los datos agregados de <strong>LAKENDD</strong>. Para esto:</p>
     <ol>
         <li>Clic en Campos</li>
         <li>Seleccionar una variable desde <strong>todos los campos</strong></li>
@@ -19,5 +20,5 @@
     <div id="pivot-container-report">
     </div>
     <script src="https://cdn.flexmonster.com/flexmonster.js"></script>
-    <script src="{{url_for('static', filename='js/myreport.js')}}"></script>
+    <script src="{{url_for('static', filename='js/lakendd.js')}}"></script>
 {% endblock %}
