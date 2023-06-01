@@ -16,3 +16,4 @@ app.config['SQLALCHEMY_DATABASE_URI'] = ("mysql+pymysql://"+ os.getenv('DB_USER'
 
 mariadb = create_engine(app.config['SQLALCHEMY_DATABASE_URI'])
 print(f"conectado a bbdd: {mariadb.connect()}")
+flex_monster_lic = os.getenv('FLEXMONSTER_LIC')
