@@ -1,12 +1,12 @@
 let pivot = new Flexmonster({
     container: "#pivot-container-report",
-    licenseKey: "Z7XQ-XJ4I0A-1X1229-69644T-0Z5I02-354C69-68654O-175L0S-333B4J-5C581I",
+    licenseKey: document.getElementById("pivot-container-report").getAttribute("data-license-key"),
     componentFolder: "https://cdn.flexmonster.com/",
     global: {
         localization: "https://cdn.flexmonster.com/loc/es.json"
     },
     width: "100%",
-    height: 430,
+    height: 800,
     toolbar: true,
     beforetoolbarcreated: customizeToolbar,
     report: {

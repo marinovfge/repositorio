@@ -1,11 +1,12 @@
 let pivot_table_ProvinciaCantonAnio = new Flexmonster({
     container: "#pivot-provinciaCanton",
-    licenseKey: "Z7XQ-XJ4I0A-1X1229-69644T-0Z5I02-354C69-68654O-175L0S-333B4J-5C581I",
+    // licenseKey: "PUT YOUR LICENSE HERE", // alternative to the read
+    licenseKey: document.getElementById("pivot-provinciaCanton").getAttribute("data-license-key"), 
     componentFolder: "https://cdn.flexmonster.com/",
     global: {
         localization: "https://cdn.flexmonster.com/loc/es.json"
     },
-    height: 385,
+    height: 600,
     width: "100%",
     toolbar: true,
     beforetoolbarcreated: customizeToolbarTotalBlock,
@@ -89,7 +90,7 @@ let pivot_table_ProvinciaCantonAnio = new Flexmonster({
 
 let barras_ProvinciaCantonAnio = new Flexmonster({
     container: "#barras-ProvinciaCanton",
-    licenseKey: "Z7XQ-XJ4I0A-1X1229-69644T-0Z5I02-354C69-68654O-175L0S-333B4J-5C581I",
+    licenseKey: document.getElementById("barras-ProvinciaCanton").getAttribute("data-license-key"), 
     componentFolder: "https://cdn.flexmonster.com/",
     global: {
         localization: "https://cdn.flexmonster.com/loc/es.json"
@@ -172,7 +173,7 @@ let barras_ProvinciaCantonAnio = new Flexmonster({
 
 let pie_flagrantes = new Flexmonster({
     container: "#pie-flagrantes",
-    licenseKey: "Z7XQ-XJ4I0A-1X1229-69644T-0Z5I02-354C69-68654O-175L0S-333B4J-5C581I",
+    licenseKey: document.getElementById("pie-flagrantes").getAttribute("data-license-key"), 
     componentFolder: "https://cdn.flexmonster.com/",
     global: {
         localization: "https://cdn.flexmonster.com/loc/es.json"
@@ -255,7 +256,7 @@ let pie_flagrantes = new Flexmonster({
 
 let tabla_delitosTipoAnio = new Flexmonster({
     container: "#tabla-delitosTipoAnio",
-    licenseKey: "Z7XQ-XJ4I0A-1X1229-69644T-0Z5I02-354C69-68654O-175L0S-333B4J-5C581I",
+    licenseKey: document.getElementById("tabla-delitosTipoAnio").getAttribute("data-license-key"), 
     componentFolder: "https://cdn.flexmonster.com/",
     global: {
         localization: "https://cdn.flexmonster.com/loc/es.json"
@@ -340,7 +341,7 @@ let tabla_delitosTipoAnio = new Flexmonster({
 
 let barras_delitosHorarioAnio = new Flexmonster({
     container: "#barras-delitosHorarioAnio",
-    licenseKey: "Z7XQ-XJ4I0A-1X1229-69644T-0Z5I02-354C69-68654O-175L0S-333B4J-5C581I",
+    licenseKey: document.getElementById("barras-delitosHorarioAnio").getAttribute("data-license-key"), 
     componentFolder: "https://cdn.flexmonster.com/",
     global: {
         localization: "https://cdn.flexmonster.com/loc/es.json"
