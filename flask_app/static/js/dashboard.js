@@ -6,7 +6,7 @@ let pivot_table_ProvinciaCantonAnio = new Flexmonster({
     global: {
         localization: "https://cdn.flexmonster.com/loc/es.json"
     },
-    height: 385,
+    height: 600,
     width: "100%",
     toolbar: true,
     beforetoolbarcreated: customizeToolbarTotalBlock,
