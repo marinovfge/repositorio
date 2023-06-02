@@ -6,7 +6,7 @@ let pivot = new Flexmonster({
         localization: "https://cdn.flexmonster.com/loc/es.json"
     },
     width: "100%",
-    height: 430,
+    height: 800,
     toolbar: true,
     beforetoolbarcreated: customizeToolbar,
     report: {
