@@ -1,0 +1,16 @@
+{% extends 'template.html' %}
+{% block title %}dashboard robos{% endblock %}
+
+{% block content %}
+    <h1 class="text-center">Dashboard Robos</h1>
+    <h2 class="text-center">Comisión Especial de Estadística de Seguridad, Justicia, Crimen y Transparencia</h2>
+    <h3>Fecha de  Corte: {{fecha_corte}}</h3>
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0;">
+      <iframe src="https://app.powerbi.com/view?r=eyJrIjoiNTQ5NTMyMjgtNmFhNC00NjJlLTg2MjYtOGU1NWYxZWQyZjVjIiwidCI6IjJmYzgyYWFkLWYyMjUtNDM0OS04YjliLTg0MTZhNGFmNGQ3ZiJ9" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+    <script src="https://cdn.flexmonster.com/flexmonster.js"></script>
+    <script src="{{url_for('static', filename='js/dashboard.js')}}"></script>
+    <script src="{{url_for('static', filename='css/mystyles.css')}}"></script>
+    
+{% endblock %}
