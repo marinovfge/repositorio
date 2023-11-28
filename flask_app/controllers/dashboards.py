@@ -32,6 +32,21 @@ def dashboard_general_fge():
     fecha_corte = Dashboard.get_fecha_corte()
     return render_template("dashboard_general_fge.html", fecha_corte = fecha_corte, flex_monster_lic = flex_monster_lic)
 
+
+@app.route('/dashboard-robospbi', methods=['GET'])
+def load_dashboard_robos_powerbi():
+    # fecha_corte = Dashboard.get_fecha_corte()
+    fecha_corte = datetime(2023,11,8).strftime('%Y/%m/%d')
+    return render_template("dashboard_robos.html", fecha_corte = fecha_corte, flex_monster_lic = flex_monster_lic)
+
+
+@app.route('/dashboard-muertesviolentas-bi', methods=['GET'])
+def load_dashboard_muertesviolentas_powerbi():
+    # fecha_corte = Dashboard.get_fecha_corte()
+    fecha_corte = datetime(2023,11,19).strftime('%Y/%m/%d')
+    return render_template("dashboard_muertes_violentas.html", fecha_corte = fecha_corte, flex_monster_lic = flex_monster_lic)
+
+
 @app.route('/acerca-de-los-datos')
 def acerca_datos():
     fecha_corte = Dashboard.get_fecha_corte()
