@@ -24,7 +24,7 @@
       }
       </style>
   </head>
-  <body>
+  <body style="display: flex; flex-direction: column; height: 100%; margin: 0;">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand" href="/"><img src="{{url_for('static', filename='imgs/FGE.png')}}" width="80" hight="80" class="d-inline-block align-top" alt="Fiscalia General del Estado"></a>
@@ -42,7 +42,8 @@
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="/dashboard-general-fge">Dashboard General FGE</a></li>
-                <li><a class="dropdown-item" href="#">Dashboard Violencia Género</a></li>
+                <li><a class="dropdown-item" href="/dashboard-robospbi">Dashboard Robos</a></li>
+                <li><a class="dropdown-item" href="/dashboard-muertesviolentas-bi">Dashboard Muertes Violentas</a></li>
               </ul>
             </li>
             <li class="nav-item">
@@ -58,14 +59,17 @@
         </div>
       </div>
     </nav>
-    <div id="content">
+    
+    <main class="flex-grow-1">
+    
       {% block content %}
       {% endblock %}
-  </div>
-  <div id="footer">
-    {% block footer %}
-      &copy; Copyleft 2023 by <a href="">Lenin G. Falconí - DESI -</a>
-    {% endblock %}
-  </div>
+  
+    </main>
+    <div id="footer">
+      {% block footer %}
+        &copy; Copyleft 2023 by <a href="">Lenin G. Falconí - DESI -</a>
+      {% endblock %}
+    </div>
 </body>
 </html>
