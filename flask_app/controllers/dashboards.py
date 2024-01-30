@@ -53,3 +53,14 @@ def acerca_datos():
     fecha_ini = datetime(2015,1,1).strftime("%d/%m/%Y")
     return render_template("acerca_datos.html", fecha_corte=fecha_corte, fecha_ini=fecha_ini)
 
+@app.route('/reporte-crear-femicidio', methods=['GET'])
+def dashboard_crear_reporte_femicidio():
+    """_summary_
+    Genera la Vista para Operar sobre femicidio_opendata 
+    Returns:
+        _type_: _description_
+    """
+    # fecha_corte = Dashboard.get_fecha_corte() 
+    # ToDo leer la fecha de corte de femicidio de una base de datos
+    fecha_corte = datetime.now()
+    return render_template("reporte_femicidio.html", fecha_corte=fecha_corte, flex_monster_lic = flex_monster_lic)
