@@ -62,5 +62,5 @@ def dashboard_crear_reporte_femicidio():
     """
     # fecha_corte = Dashboard.get_fecha_corte() 
     # ToDo leer la fecha de corte de femicidio de una base de datos
-    fecha_corte = datetime.now()
+    fecha_corte = datetime.now().strftime("%d/%m/%Y")
     return render_template("reporte_femicidio.html", fecha_corte=fecha_corte, flex_monster_lic = flex_monster_lic)
