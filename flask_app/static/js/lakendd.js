@@ -8,7 +8,7 @@ let pivot = new Flexmonster({
     width: "100%",
     height: 800,
     toolbar: true,
-    beforetoolbarcreated: customizeToolbar,
+    // beforetoolbarcreated: customizeToolbar,
     report: {
       "dataSource": {
           type: "elasticsearch",
@@ -42,11 +42,11 @@ let pivot = new Flexmonster({
 function customizeToolbar(toolbar) {
     let tabs = toolbar.getTabs();
     toolbar.getTabs = function() {
-    // tabs = tabs.filter(tab => tab.id != "fm-tab-connect"); // desactiva connect
+    tabs = tabs.filter(tab => tab.id != "fm-tab-connect"); // desactiva connect
     //   tabs = tabs.filter(tab => tab.id != "fm-tab-open"); // desactiva open
     //   tabs = tabs.filter(tab => tab.id != "fm-tab-save"); // desactiva  save
       
-    // return tabs;
+    return tabs;
     }
   }
   
