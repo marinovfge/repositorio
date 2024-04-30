@@ -51,7 +51,15 @@ def load_dashboard_muertesviolentas_powerbi():
 def acerca_datos():
     fecha_corte = Dashboard.get_fecha_corte()
     fecha_ini = datetime(2015,1,1).strftime("%d/%m/%Y")
-    return render_template("acerca_datos.html", fecha_corte=fecha_corte, fecha_ini=fecha_ini)
+    total_registros = Dashboard.get_total_registros_open_data()
+    return render_template("acerca_datos.html", fecha_corte=fecha_corte, fecha_ini=fecha_ini, total_registros=total_registros)
+
+@app.route('/acerca-de-los-datos-robos')
+def acerca_datos_robo():
+    fecha_corte = Dashboard.get_fecha_corte()
+    fecha_ini = datetime(2015,1,1).strftime("%d/%m/%Y")
+    total_registros = Dashboard.get_total_registros_open_data()
+    return render_template("acerca_datos_robos.html", fecha_corte=fecha_corte, fecha_ini=fecha_ini, total_registros=total_registros)
 
 @app.route('/reporte-crear-femicidio', methods=['GET'])
 def dashboard_crear_reporte_femicidio():
