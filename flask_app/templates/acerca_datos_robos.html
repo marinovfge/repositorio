@@ -6,15 +6,16 @@
         <h1 class="text-center">NOTA METODOLÓGICA</h1>
     </div>
     <div class="container border border-primary mt-2">
-        <h4 class="text-bg-primary">Datos Abiertos FGE </h4>
+        <h4 class="text-bg-primary">Datos de Denuncias de Robo</h4>
         <ul>
-            <li><strong>Fuente: </strong>Sistema Integrado de Actuaciones Fiscales (SIAF) - ANALÍTICA FGE</li>
-            <li><strong>Motor de búsqueda: </strong>Elasticsearch</li>
-            <li><strong>Fecha de Corte:. </strong>{{fecha_corte}}</li>
+            <li><strong>Fuente 2019 - 2022: </strong>Comisión Especial de Estadística, de Seguridad, Justicia, Crimen y Transparencia </li>
+            <li><strong>Fuente 2023 - Fecha de corte: </strong>Sistema Integrado de Actuaciones Fiscales (SIAF) - Modelo de Aprendizaje Automático de Lenguaje Natural (LLM)</li>
+            <li><strong>Modelo de Lenguaje Natural: </strong>Modelo de Aprendizaje Profundo potenciado por la arquitectura de Transformadores para la predicción de categorías de robo a partir del relato de la denuncia o del parte policial</li>
+            <li><strong>Fecha de Corte (Modelo LLM):. </strong>{{fecha_corte}}</li>
             <li><strong>Período de Análisis: </strong>{{fecha_ini}} @ {{fecha_corte}}</li>
             <li><strong>Unidad de Análisis: </strong>Noticia del Delito (NDD)</li>
-            <li><strong>Actualización: </strong>Semanal</li>
-            <li><strong>Total de Registros: </strong>{{total_registros}}</li>
+            <li><strong>Actualización: </strong>Mensual</li>
+            <!-- <li><strong>Total de Registros: </strong>{{total_registros}}</li> -->
         </ul>
     </div>
     <!-- <hr class="featurette-divider"> -->
