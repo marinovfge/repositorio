@@ -1,0 +1,301 @@
+{% extends 'template.html' %}
+{% block title %}Acerca de los Datos{% endblock %}
+
+{% block content %}
+    <div>
+        <h1 class="text-center">NOTA METODOLÓGICA</h1>
+    </div>
+    <div class="container border border-primary mt-2">
+        <h4 class="text-bg-primary">Datos de Denuncias de Robo</h4>
+        <ul>
+            <li><strong>Fuente 2019 - 2022: </strong>Comisión Especial de Estadística, de Seguridad, Justicia, Crimen y Transparencia </li>
+            <li><strong>Fuente 2023 - Fecha de corte: </strong>Sistema Integrado de Actuaciones Fiscales (SIAF) - Modelo de Aprendizaje Automático de Lenguaje Natural (LLM)</li>
+            <li><strong>Modelo de Lenguaje Natural: </strong>Modelo de Aprendizaje Profundo potenciado por la arquitectura de Transformadores para la predicción de categorías de robo a partir del relato de la denuncia o del parte policial</li>
+            <li><strong>Fecha de Corte (Modelo LLM):. </strong>{{fecha_corte}}</li>
+            <li><strong>Período de Análisis: </strong>{{fecha_ini}} @ {{fecha_corte}}</li>
+            <li><strong>Unidad de Análisis: </strong>Noticia del Delito (NDD)</li>
+            <li><strong>Actualización: </strong>Mensual</li>
+            <!-- <li><strong>Total de Registros: </strong>{{total_registros}}</li> -->
+        </ul>
+    </div>
+    <!-- <hr class="featurette-divider"> -->
+    <div class="container border border-danger mt-2">
+        <h4 class="text-bg-danger">Consideraciones</h4>
+        <ol>
+            <!-- <li>La información disponible corresponde a los registros de tipos penales vigentes en el Código Orgánico Integral Penal (COIP) desde el año 2015</li> -->
+            <!-- <li>La reducción de registros en el año 2020 se explica por la Pandemia de Covid-19</li> -->
+            <!-- <li>El total de registros corresponde a eventos consumados y tentativas</li> -->
+            <li>Se cuantifica el total de Noticia del Delito (NDD) registradas en el Sistema Integrado de Actuaciones Fiscales (SIAF).  Se contabilizan también las NDD que tienen dos o más registros, que corresponden a un mismo hecho delictivo y fueron asignadas a diferentes Fiscalías Especializadas debido a la naturaleza de la investigación.</li>
+            <li>Consumado / tentativa</li>
+            
+        </ol>
+    </div>
+    <div class="container border border-info mt-2">
+        <h4 class="text-bg-info text-capitalize">Principales definiciones</h4>  
+        <div class="row">  
+            <div class="col-md-4">
+                <div class="card border-dark mb-3" data-toggle="collapse" data-target="#card1">
+                    <div class="card-header">
+                        <h5 class="card-title text-uppercase text-center">Siaf</h5>
+                    </div>
+                    <div id="card1" class="collapse">
+                        <div class="card-body text-dark">
+                            <p class="card-text">Sistema Informático para el registro y seguimiento de la gestión procesal de la Fiscalía General del Estado; 
+                                permitiendo la homologación de las actuaciones fiscales y la optimización del tiempo de respuesta a usuarios externos e internos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card border-dark mb-3" data-toggle="collapse" data-target="#card2">
+                    <div class="card-header">
+                        <h5 class="card-title text-uppercase text-center">Plataforma Analítica FGE</h5>
+                    </div>
+                    <div id="card2" class="collapse">
+                        <div class="card-body text-dark">
+                            <p class="card-text">Herramienta de inteligencia de negocios que procesa grandes cantidades de datos estructurados 
+                                y no estructurados para el análisis y visualización de la información del SIAF</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card border-dark mb-3" data-toggle="collapse" data-target="#card3">
+                    <div class="card-header">
+                        <h5 class="card-title text-uppercase text-center">Noticia del Delito</h5>
+                    </div>
+                    <div id="card3" class="collapse">
+                        <div class="card-body text-dark">
+                            <h6 class="card-subtitle mb-2 text-muted">FGE-CGAJP-DCJEAF-2020-02569-M</h6>
+                            <blockquote>
+                                <p style="font-style: italic;">"Es el registro en el Sistema Integrado de Actuaciones Fiscales SIAF de presuntos hechos delictivos de acción pública de competencia de la Fiscalía General del Estado, identificadas con un código de 15 dígitos numérico, que son asignadas a las diferentes Unidades, Fiscalías Especializadas o Multicompetentes para su sustanciación, con el fin de brindar seguimiento en la trazabilidad y localización de las mismas."</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card border-dark mb-3" data-toggle="collapse" data-target="#card4">
+                    <div class="card-header">
+                        <h5 class="card-title text-uppercase text-center">Presunto Delito</h5>
+                    </div>
+                    <div id="card4" class="collapse">
+                        <div class="card-body text-dark">
+                            <blockquote>
+                                <p class="card-text" style="font-style: italic;">“Art. 18.- Infracción penal.- Es la conducta típica, antijurídica y culpable (…)”</p>
+                                <p class="card-text" style="font-style: italic;">“Art. 19.- Clasificación de las infracciones.- (Reformado por el Art. 1 de la Ley s/n, R.O. 598-3S, 30-IX-2015).- Las infracciones se clasifican en delitos y contravenciones.”</p>
+                                <p class="card-text" style="font-style: italic;">“Art. 22.- Conductas penalmente relevantes.- Son penalmente relevantes las acciones u omisiones que ponen en peligro o producen resultados lesivos, descriptibles y demostrables.”</p>
+                                <p class="card-text" style="font-style: italic;">“Art. 25.- Tipicidad.- Los tipos penales describen los elementos de las conductas penalmente relevantes.”</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card border-dark mb-3" data-toggle="collapse" data-target="#card5">
+                    <div class="card-header">
+                        <h5 class="card-title text-uppercase text-center">Provincia de incidente</h5>
+                    </div>
+                    <div id="card5" class="collapse">
+                        <div class="card-body text-dark">
+                            <p>Son circunscripciones territoriales conformadas por los cantones que legalmente les corresponden en donde ocurrió el evento denunciado.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card border-dark mb-3" data-toggle="collapse" data-target="#card6">
+                    <div class="card-header">
+                        <h5 class="card-title text-uppercase text-center">Cantón de incidente</h5>
+                    </div>
+                    <div id="card6" class="collapse">
+                        <div class="card-body text-dark">
+                            <p>Son circunscripciones territoriales conformadas por parroquias rurales y la cabecera cantonal con sus parroquias urbanas en donde ocurrió el evento denunciado.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="row">
+        
+            <div class="col-md-4">
+                <div class="card border-dark mb-3" data-toggle="collapse" data-target="#card7">
+                    <div class="card-header">
+                        <h5 class="card-title text-uppercase text-center">Hora de incidente</h5>
+                    </div>
+                    <div id="card7" class="collapse">
+                        <div class="card-body text-dark">
+                            <ul>
+                                <li>Madrugada: 00h00 – 05h59</li>
+                                <li>Mañana: 06h00-11h59</li>
+                                <li>Tarde: 12h00-17h59</li>
+                                <li>Noche: 18h00-23h59</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card border-dark mb-3" data-toggle="collapse" data-target="#card8">
+                    <div class="card-header">
+                        <h5 class="card-title text-uppercase text-center">Año de Registro</h5>
+                    </div>
+                    <div id="card8" class="collapse">
+                        <div class="card-body text-dark">
+                            <p>Año de primer sorteo o registro inicial de la Noticia del Delito</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="col-md-4">
+                <div class="card border-dark mb-3" data-toggle="collapse" data-target="#card9">
+                    <div class="card-header">
+                        <h5 class="card-title text-uppercase text-center">Flagrante/No Flagrante</h5>
+                    </div>
+                    <div id="card9" class="collapse">
+                        <div class="card-body text-dark">
+                            <h6 class="card-subtitle mb-2 text-muted">Art. 527 del COIP Flagrancia</h6>
+                            <blockquote>
+                                <p style="font-style: italic;">“Se entiende que se encuentra en situación de flagrancia, la persona que comete el delito en presencia de una o más personas o cuando se la descubre inmediatamente después de su supuesta comisión, siempre que exista una persecución ininterrumpida desde el momento de la supuesta comisión hasta la aprehensión, asimismo cuando se encuentre con armas, instrumentos, el producto del ilícito, huellas o documentos relativos a la infracción recién cometida. 
+                                No se podrá alegar persecución ininterrumpida si han transcurrido más de veinticuatro horas entre la comisión de la infracción y la aprehensión.”
+                                </p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card border-dark mb-3" data-toggle="collapse" data-target="#card10">
+                    <div class="card-header">
+                        <h5 class="card-title text-uppercase text-center">Consumado/Tentativa</h5>
+                    </div>
+                    <div id="card10" class="collapse">
+                        <div class="card-body text-dark">
+                            <h6 class="card-subtitle mb-2 text-muted">Art. 39 del COIP Tentativa</h6>
+                            <blockquote>
+                                <p style="font-style: italic;">“Tentativa es la ejecución que no logra consumarse o cuyo resultado no llega a verificarse por circunstancias ajenas a la voluntad del autor, a pesar de que de manera dolosa inicie la ejecución del tipo penal mediante actos idóneos conducentes de modo inequívoco a la realización de un delito.”</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>      
+    <!-- <hr class="featurette-divider"> -->
+    
+    <!-- <hr class="featurette-divider"> -->
+    <div class="container border border-secondary mt-2">
+        <h3 class="text-bg-warning">Normativa</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card border-dark mb-3" data-toggle="collapse" data-target="#card9">
+                    <div class="card-header">
+                        <h5 class="card-title text-uppercase text-center">Código Integral Penal (COIP)</h5>
+                    </div>
+                    <div id="card9" class="collapse">
+                        <div class="card-body text-dark">
+                            <h6 class="card-subtitle mb-2 text-muted">Art. 1 del COIP Finalidad</h6>
+                            <blockquote>
+                                <p style="font-style: italic;">“Este Código tiene como finalidad normar el poder punitivo del Estado, tipificar 
+                                    las infracciones penales, establecer el procedimiento para el juzgamiento de las personas con estricta 
+                                    observancia del debido proceso, promover la rehabilitación social de las personas sentenciadas y la 
+                                    reparación integral de las víctimas.”
+                                </p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-dark mb-3" data-toggle="collapse" data-target="#card11">
+                    <div class="card-header">
+                        <h5 class="card-title text-uppercase text-center">Artículo 472 del COIP numeral 3</h5>
+                    </div>
+                    <div id="card11" class="collapse">
+                        <div class="card-body text-dark">
+                            <h6 class="card-subtitle mb-2 text-muted">respecto de la Información de circulación restringida, determina que:</h6>
+                            <blockquote>
+                                <p style="font-style: italic;">“No podrá circular libremente la siguiente información: (…) 3. La información producida por la o el fiscal en el marco de una investigación previa y aquella originada en la orden judicial relacionada con las técnicas especiales de investigación”</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-dark mb-3" data-toggle="collapse" data-target="#card12">
+                    <div class="card-header">
+                        <h5 class="card-title text-uppercase text-center">Artículo 584 del COIP</h5>
+                    </div>
+                    <div id="card12" class="collapse">
+                        <div class="card-body text-dark">
+                            <h6 class="card-subtitle mb-2 text-muted">señala que: </h6>
+                            <blockquote>
+                                <p style="font-style: italic;">“Las actuaciones de la Fiscalía, de la o el juzgador, del personal del Sistema especializado integral de investigación, medicina legal y ciencias forenses, la Policía Nacional, y de otras instituciones que intervienen en la investigación previa, se mantendrán en reserva, sin perjuicio del derecho de la víctima y de las personas a las cuales se investiga y de sus abogados a tener acceso inmediato, efectivo y suficiente a las investigaciones, cuando lo soliciten. (…)”</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card border-dark mb-3" data-toggle="collapse" data-target="#card13">
+                    <div class="card-header">
+                        <h5 class="card-title text-uppercase text-center">Ley Orgánica de Protección de Datos Personales</h5>
+                    </div>
+                    <div id="card13" class="collapse">
+                        <div class="card-body text-dark">
+                            <h6 class="card-subtitle mb-2 text-muted">Art. 36</h6>
+                            <blockquote>
+                                <p style="font-style: italic;">“(…) Excepciones de consentimiento para la transferencia o comunicación de datos personales.- No es necesario contar con el consentimiento del titular para la transferencia o comunicación de datos personales, en los siguientes supuestos: (…) 4) Cuando la comunicación se produzca entre Administraciones Públicas y tenga por objeto el tratamiento posterior de datos con fines históricos, estadísticos o científicos, siempre y cuando dichos datos se encuentren debidamente disociados o a lo menos anonimizados (…)”</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card border-dark mb-3" data-toggle="collapse" data-target="#card15">
+                    <div class="card-header">
+                        <h5 class="card-title text-uppercase text-center">Ley Estadística</h5>
+                    </div>
+                    <div id="card15" class="collapse">
+                        <div class="card-body text-dark">
+                            <h6 class="card-subtitle mb-2 text-muted">Art. 21</h6>
+                            <blockquote>
+                                <p style="font-style: italic;">“Los datos individuales que se obtengan para efecto de estadística y censos son de carácter reservado; en consecuencia, no podrán darse a conocer informaciones individuales de ninguna especie, ni podrán ser utilizados para otros fines como de tributación o conscripción, investigaciones judiciales y, en general, para cualquier objeto distinto del propiamente estadístico o censal. Solo se darán a conocer los resúmenes numéricos, las concentraciones globales, las totalizaciones y, en general, los datos impersonales”</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-dark mb-3" data-toggle="collapse" data-target="#card16">
+                    <div class="card-header">
+                        <h5 class="card-title text-uppercase text-center">Dirección de Estadística y Sistemas de Información de la FGE</h5>
+                        <div id="card16" class="collapse">
+                            <div class="card-body text-dark">
+                                <h6 class="card-subtitle mb-2 text-muted">Misión</h6>
+                                <blockquote>
+                                    <p style="font-style: italic;">“Dirigir el levantamiento, procesamiento y análisis de información estadística institucional, a fin de contribuir a la provisión de información cuantitativa que apoye la gestión institucional, toma de decisiones y  proporcione respuestas a requerimientos de información tanto interna como externa dentro de los ámbitos de intervención institucional.”</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
